@@ -3,7 +3,7 @@
 *
 * @package Errorpages
 * @copyright (c) 2014 ForumHulp.com
-* Nederlandse vertaling @ Solidjeuh <http://www.froddelpower.be>
+* Nederlandse vertaling @ Solidjeuh <https://www.muziekpromo.net>
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -32,58 +32,64 @@ if (empty($lang) || !is_array($lang))
 // You do not need this where single placeholders are used, e.g. 'Message %d' is fine
 // equally where a string contains only two placeholders which are used to wrap text
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
+//
+// Some characters you may want to copy&paste:
+// ’ « » “ ” …
+//
 
 // Custom error pages
 $lang = array_merge($lang, array(
-	'ERRORPAGESERROR'					=> 'Fout pagina&#39;s',
-	'ERRORPAGES_LOG'					=> 'Log Fout Pagina&#39;s',
-	'ERRORPAGES_LOG_EXPLAIN'			=> 'Sla alle Fout Pagina&#39;s op in de Fout Log onder de Onderhoud Tab',
-	'ERRORPAGES_EXPLAIN'				=> 'Uitleg Fout Pagina&#39;s',
+	'ERRORPAGESERROR'					=> 'Error Pagina’s',
+	'ERRORPAGES_LOG'					=> 'Log Error Pagina’s',
+	'ERRORPAGES_LOG_EXPLAIN'			=> 'Sla alle Error Pagina’s op in de Error Log onder de Onderhoud Tab',
+	'ERRORPAGES_EXPLAIN'				=> 'Uitleg Error Pagina’s',
 	'ERRORPAGES_EXPLAIN_EXPLAIN'		=> 'Leg de foutmelding uit in het berichten venster',
-	'ERROR_BAD_REQUEST' 				=> 'Foute aanvraag',
-	'ERROR_BAD_REQUESTEXPA' 			=> 'De aanvraag heeft een slechte syntaxis of kon onmogelijk samengevoegd worden om afgemaakt te worden.',
+	'ERRORPAGE_NOTICE'					=> '<div class="phpinfo"><p class="entry">Configuratie instellingen zitten in %1$s » %2$s » %3$s.</p></div>',
+	'ERROR_BAD_REQUEST' 				=> 'Foutieve aanvraag',
+	'ERROR_BAD_REQUESTEXPA' 			=> 'De aanvraag had een slechte syntax of kon onmogelijk worden uitgevoerd.',
 	'ERROR_AUTH_REQUIRED' 				=> 'Niet geautoriseerd',
-	'ERROR_AUTH_REQUIREDEXPA' 			=> 'Dit betekent dat de pagina het nodig vindt dat bezoekers zichzelf aanmelden met hun gebruikersnaam en paswoord. Indien ze dit niet doen zal de server een fout pagina weergeven.',
+	'ERROR_AUTH_REQUIREDEXPA' 			=> 'Dit betekent dat de pagina vereist dat de bezoekers zich authenticeren met hun gebruikersnaam en wachtwoord. Als de gebruikers dit niet doen geeft de server deze foutmelding weer.',
 	'ERROR_FORBIDDEN' 					=> 'Verboden toegang',
-	'ERROR_FORBIDDENEXPA' 				=> 'Dit betekent dat toegang tot de pagina die de bezoeker aanvraagt niet toegestaan is. Dit kan zijn door een speciale regels in de configuratie van de web server, of door een specifieke permissie van het bestand.',
+	'ERROR_FORBIDDENEXPA' 				=> 'Dit betekent dat de toegang tot de pagina die de bezoeker vraagt ​​niet is toegestaan. Dit kan door een bijzondere regel in de configuratie van de webserver of de specifieke bestand systeem permissies van het bestand.',
 	'ERROR_NOT_FOUND' 					=> 'Niet gevonden',
-	'ERROR_NOT_FOUNDEXPA'		 		=> 'Dit betekent dat het opgevraagde bestand niet aanwezig is.',
+	'ERROR_NOT_FOUNDEXPA'		 		=> 'Het gevraagde bestand bestaat niet op de server.',
 	'PRECONDITION_FAILED'				=> 'Niet voldaan aan vooraf gestelde voorwaarde',
-	'PRECONDITION_FAILEDEXPA'			=> 'Deze fout wil zeggen dat de aanvraag een mod_security beveiliging activeerde langs jouw kant.',
+	'PRECONDITION_FAILEDEXPA'			=> 'De fout betekent dat het verzoek leidde tot een mod_security bescherming aan de server kant.',
 	'METHOD_NOT_ALLOWED'				=> 'Methode niet toegestaan',
-	'METHOD_NOT_ALLOWEDEXPA'			=> 'Er werd een verzoek gemaakt van een bron met behulp van een verzoek methode die niet wordt ondersteund door die bron. Voorbeeld: Gebruik maken van GET in een formulier dat data nodig heeft dat gepresenteerd word via POST, of PUT gebruikt op een lees-enkel hulpbron.',
+	'METHOD_NOT_ALLOWEDEXPA'			=> 'Een verzoek werd gemaakt van een bron met behulp van een verzoek methode die niet wordt ondersteund door die bron. Bijvoorbeeld met behulp van GET op een formulier dat de gegevens nodig heeft om via POST worden voorgelegd',
 	'NOT_ACCEPTABLE'					=> 'Niet aanvaardbaar',
-	'NOT_ACCEPTABLEEXPA'				=> 'De opgevraagde bron is alleen geschikt voor het genereren van inhoud die niet acceptabel is volgens de Accept headers verzonden in het verzoek.',
+	'NOT_ACCEPTABLEEXPA'				=> 'De opgevraagde bron is alleen geschikt voor het genereren van content niet aanvaardbaar volgens de Accept headers verzonden in het verzoek.',
 	'PROXY_AUTHENTICATION_REQUIRED'		=> 'Authenticatie op de proxyserver verplicht',
-	'PROXY_AUTHENTICATION_REQUIREDexpa'	=> 'De client moet zich eerst authenticeren met de proxy.',
+	'PROXY_AUTHENTICATION_REQUIREDexpa'	=> 'De gebruiker moet zich eerst verifiëren bij de proxyserver.',
 	'REQUEST_TIMED_OUT'					=> 'Aanvraagtijd verstreken',
-	'REQUEST_TIMED_OUTEXPA'				=> 'De server had een time-out tijdens het wachten op de aanvraag. Volgens de HTTP specificaties: "De client produceerde geen aanvraag in de tijd dat de server nodig had om te wachten. De client mag de aanvraag opnieuw doen zonder modificaties op elk gewenst moment."',
+	'REQUEST_TIMED_OUTEXPA'				=> 'De server is gestopt met de aanvraag. Volgens HTTP specificaties: "De gebruiker deed geen aanvraag binnen de gestelde tijd van de server."',
 	'CONFLICTING_REQUEST'				=> 'Conflict',
-	'CONFLICTING_REQUESTEXPA'			=> 'Geeft aan dat het verzoek niet kon worden verwerkt als gevolg van het conflict in het verzoek, zoals een bewerking conflict in het geval van meerdere updates',
+	'CONFLICTING_REQUESTEXPA'			=> 'Geeft aan dat het verzoek niet kon worden verwerkt, vanwege het conflict in het verzoek, zoals een bewerkingsconflict in het geval van meerdere updates',
 	'GONE'								=> 'Verdwenen',
-	'GONEEXPA'							=> 'Geeft aan dat de aangevraagde bron niet meer beschikbaar is en niet meer beschikbaar zal komen. Dit moet worden gebruikt wanneer een bron met opzet is verwijderd en de bron moet worden leeggemaakt. Na het ontvangen van een 410-status code moet de client de bron niet opnieuw opvragen in de toekomst. Clients zoals zoekmachines zouden de bron van hun index moeten verwijderen. [citaat nodig] De meeste gevallen vereisen geen clients en zoekmachines om de bron leeg te maken, en een "404 Not Found" kan in de plaats gebruikt worden.',
-	'CONTENT_LENGTH_REQUIRED'			=> 'Inhoud lengte verplicht',
-	'CONTENT_LENGTH_REQUIREDexpa'		=> 'Het verzoek heeft de lengte van de inhoud die vereist is door de gevraagde bron niet gespecificeerd',
+	'GONEEXPA'							=> 'Geeft aan dat de gevraagde bron niet langer beschikbaar is en niet opnieuw beschikbaar zal zijn. Dit moet worden gebruikt wanneer een resource opzettelijk is verwijderd en de resource moet worden opgeschoond. Bij ontvangst van een 410-statuscode moet de cliënt de bron in de toekomst niet opnieuw aanvragen. Cliënten zoals zoekmachines moeten de bron uit hun index verwijderen. [nodig citaat] De meeste gebruik cases vereisen geen cliënten en onderzoek motoren om de hulpbron te zuiveren, en een "404 niet gevonden" kan in plaats daarvan worden gebruikt.',
+	'CONTENT_LENGTH_REQUIRED'			=> 'Lengte benodigd',
+	'CONTENT_LENGTH_REQUIREDexpa'		=> 'Het verzoek specificeerde niet de lengte van de inhoud, die vereist is door de gevraagde bron',
 	'REQUEST_ENTITY_TOO_LONG'			=> 'Aanvraag te groot',
-	'REQUEST_ENTITY_TOO_LONGEXPA'		=> 'De aanvraag is groter dan de server kan, of bereid is om te verwerken.',
+	'REQUEST_ENTITY_TOO_LONGEXPA'		=> 'Het verzoek is groter dan de server bereid of in staat is om te verwerken.',
 	'REQUEST_URI_TOO_LONG'				=> 'Aanvraag-URL te lang',
-	'REQUEST_URI_TOO_LONGEXPA'			=> 'De opgeven URI was te lang voor de server om te verwerken. Vaak het resultaat van te veel data dat wordt gecodeerd als een query-string of een GET aanvraag. In dat geval zou het geconverteerd moeten worden naar een POST aanvraag',
+	'REQUEST_URI_TOO_LONGEXPA'			=> 'De opgegeven URI was te lang voor de server om te verwerken. Vaak is het resultaat van te veel gegevens gecodeerd als een queryreeks van een GET-aanvraag, in welk geval het moet worden geconverteerd naar een POST-aanvraag.',
 	'UNSUPPORTED_MEDIA_TYPE'			=> 'Media-type niet ondersteund',
-	'UNSUPPORTED_MEDIA_TYPEEXPA'		=> 'De aangevraagde entiteit heeft een media-type dat de server of bron niet ondersteund. Als voorbeeld, de client upload een afbeelding als image/svg+xml, maar de server vereist dat afbeeldingen een ander formaat gebruiken.',
+	'UNSUPPORTED_MEDIA_TYPEEXPA'		=> 'De aanvraagentiteit heeft een media type dat de server of bron niet ondersteunt. De cliënt upload bijvoorbeeld een afbeelding als / svg + xml, maar de server vereist dat afbeeldingen een ander formaat gebruiken.',
 	'TEAPOT'							=> 'Ik ben een theepot (RFC 2324)',
-	'TEAPOTEXPA'						=> 'Deze code werd gedefinieerd in 1998 als een van de traditionele IETF April Fools grappen, in RFC 2324, Hyper Text Coffee Pot Control protocol en zal naar verwachting niet worden uitgevoerd door de werkelijke HTTP-servers.',
-	'INTERNAL_SERVER_ERROR'				=> 'Interne serverfout',
-	'INTERNAL_SERVER_ERROREXPA' 		=> 'De server is een onverwachte voorwaarde tegengekomen die verhinderd dat het verzoek vervult kan worden.',
+	'TEAPOTEXPA'						=> 'Deze code werd in 1998 gedefinieerd als een van de traditionele grapjes van IETF April Fools, in RFC 2324, Hyper Text Coffee Pot Control Protocol, en zal naar verwachting niet door echte HTTP-servers worden geïmplementeerd..',
+	'INTERNAL_SERVER_ERROR'				=> 'Interne server fout',
+	'INTERNAL_SERVER_ERROREXPA' 		=> 'De server heeft een onverwachte situatie aangetroffen waardoor deze niet aan de aanvraag kon voldoen.',
 	'NOT_IMPLEMENTED' 					=> 'Niet geïmplementeerd',
-	'NOT_IMPLEMENTEDEXPA' 				=> 'De server ondersteund de benodigde faciliteit niet.',
+	'NOT_IMPLEMENTEDEXPA' 				=> 'De server ondersteunt de vereiste installatie niet.',
 	'BAD_GATEWAY' 						=> 'Bad Gateway',
-	'BAD_GATEWAYEXPA' 					=> 'De server fungeerde als een gateway of proxy en kreeg een ongeldige reactie van de upstream-server.',
+	'BAD_GATEWAYEXPA' 					=> 'De server fungeerde als een gateway of proxy en ontving een ongeldig antwoord van de upstream-server.',
 	'SERVICE_UNAVAILABLE' 				=> 'Dienst niet beschikbaar',
-	'SERVICE_UNAVAILABLEEXPA' 			=> 'De server is tijdelijk niet in staat om uw verzoek te verwerken wegens onderhoud downtime of capaciteitsproblemen. Probeer het later opnieuw.',
-	'GATEWAY_TIMOUT' 					=> 'Gateway Timeout',
-	'GATEWAY_TIMOUTEXPA' 				=> 'De server fungeerde als een gateway of proxy en heeft geen tijdige reactie van de upstream-server ontvangen.',
+	'SERVICE_UNAVAILABLEEXPA' 			=> 'De server kan uw verzoek tijdelijk niet uitvoeren vanwege onderhoud storingen of capaciteitsproblemen. Probeer het later opnieuw.',
+	'GATEWAY_TIMOUT' 					=> 'Gateway Time-out',
+	'GATEWAY_TIMOUTEXPA' 				=> 'De server fungeerde als gateway of proxy en ontving geen tijdig antwoord van de upstream-server.',
 	'HTTP_VERSION_NOT_SUPPORTED' 		=> 'HTTP-versie wordt niet ondersteund',
-	'HTTP_VERSION_NOT_SUPPORTEDEXPA' 	=> 'De server biedt geen ondersteuning voor de HTTP-protocol versie die gebruikt wordt in het verzoek.',
+	'HTTP_VERSION_NOT_SUPPORTEDEXPA' 	=> 'De server ondersteunt de HTTP-protocolversie die in de aanvraag wordt gebruikt niet.',
 	'ERROR_UNKNOWN'     	  		 	=> 'Onbekende Server Fout',
-	'ERROR_UNKNOWNEXPA'      		 	=> ''
+	'ERROR_UNKNOWNEXPA'      		 	=> '',
+	'FH_HELPER_NOTICE'		=> 'Forumhulp helper applicatie bestaat niet!<br />Download <a href="https://github.com/ForumHulp/helper" target="_blank">forumhulp/helper</a> en kopieer de helper map naar uw forumhulp extensie folder.',
 ));
